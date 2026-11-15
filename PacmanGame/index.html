@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090c1d">
+    <title>Pac-Man Maze</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="game-header">
+        <div>
+          <p class="eyebrow">ARCADE CLASSIC</p>
+          <h1>Pac-Man</h1>
+        </div>
+        <p class="instructions">Use the arrow keys to move</p>
+      </header>
+
+      <section class="game-panel" aria-label="Pac-Man game">
+        <div class="hud" aria-live="polite">
+          <div class="hud-item">
+            <span class="hud-label">SCORE</span>
+            <strong id="score-value">0</strong>
+          </div>
+          <div class="hud-item ghosts-item">
+            <span class="hud-label">GHOSTS OUT</span>
+            <strong id="released-ghosts-value">0 / 4</strong>
+          </div>
+          <div class="hud-item lives-item">
+            <span class="hud-label">LIVES</span>
+            <strong id="lives-value">3</strong>
+          </div>
+        </div>
+        <p id="game-status" class="game-status">Use the arrow keys to start. Ghosts release every 100 points.</p>
+
+        <div class="board-wrap">
+          <canvas id="game-canvas" width="588" height="588" aria-label="Pac-Man maze">
+            Your browser does not support the canvas element.
+          </canvas>
+          <div id="terminal-screen" class="terminal-screen" hidden>
+            <p class="eyebrow">MAZE COMPLETE</p>
+            <h2 id="terminal-title">LEVEL COMPLETED / YOU WIN</h2>
+            <p class="final-score">Final score: <strong id="final-score">0</strong></p>
+            <button id="restart-button" type="button">Restart Game</button>
+          </div>
+        </div>
+      </section>
+      <footer>Dots <span>10 pts</span><i></i> Power pellets <span>50 pts</span></footer>
+    </main>
+  </body>
+</html>
